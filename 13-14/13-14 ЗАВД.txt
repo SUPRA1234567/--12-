@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+// Функція для друку заданої кількості символів рядка
+void printLimitedChars(const char *str, int limit) {
+    int length = strlen(str);
+    // Обмеження кількості символів, якщо воно перевищує довжину рядка
+    if (limit > length)
+        limit = length;
+    
+    // Друк символів рядка
+    for (int i = 0; i < limit; i++) {
+        printf("%c", str[i]);
+    }
+}
+
+int main() {
+    char str[] = "Це тестовий рядок";
+    int limit = 10; // Вказати кількість символів для друку
+    printf("Рядок з обмеженою кількістю символів: ");
+    printLimitedChars(str, limit);
+    printf("\n");
+    return 0;
+}
