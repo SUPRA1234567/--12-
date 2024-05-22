@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+// Оголошення структури для представлення інформації про працівника
+struct Employee {
+    char name[50];
+    float weight;
+    float height;
+    int age;
+};
+
+int main() {
+    // Оголошення змінної типу структури Employee
+    struct Employee emp;
+
+    // Зчитування інформації про працівника з клавіатури
+    printf("Введіть ім'я працівника: ");
+    scanf("%s", emp.name);
+
+    printf("Введіть вагу працівника: ");
+    scanf("%f", &emp.weight);
+
+    printf("Введіть висоту працівника: ");
+    scanf("%f", &emp.height);
+
+    printf("Введіть вік працівника: ");
+    scanf("%d", &emp.age);
+
+    // Вивід інформації про працівника на екран
+    printf("\nІнформація про працівника %s\n", emp.name);
+    printf("----------------------------------------\n");
+    printf("Ім'я: %s\n", emp.name);
+    printf("Вага: %.2f\n", emp.weight);
+    printf("Висота: %.2f\n", emp.height);
+    printf("Вік: %d\n", emp.age);
+
+    return 0;
+}
