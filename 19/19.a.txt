@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    FILE *in; // Опис вказівника на файл
+    int ch;
+    
+    if ((in = fopen("proba", "r")) != NULL) { // Перевіряється, чи вдалося відкрити файл
+        while ((ch = getc(in)) != EOF) // Отримується символ із in
+            putc(ch, stdout); // Виведення символа в стандартний потік на екран.
+        fclose(in);
+    } else {
+        printf("Файл proba не відкривається \n");
+    }
+    
+    return 0;
+}
+
